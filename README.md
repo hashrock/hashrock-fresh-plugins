@@ -4,7 +4,7 @@ add this plugin like:
 
 ```ts
 // main.ts
-import basicAuthPlugin from "https://deno.land/x/hashrock-fresh-plugins/basic.ts";
+import basicAuthPlugin from "https://deno.land/x/hashrock_fresh_plugins/basic.ts";
 
 await start(manifest, {
   plugins: [
