@@ -1,4 +1,4 @@
-import { MiddlewareHandlerContext, Plugin } from "./deps.ts";
+import { FreshContext, Plugin } from "./deps.ts";
 
 export default function basicAuthPlugin(path: string): Plugin {
   const USER = Deno.env.get("BASIC_AUTH_USER");
@@ -10,7 +10,7 @@ export default function basicAuthPlugin(path: string): Plugin {
 
   async function handler(
     req: Request,
-    ctx: MiddlewareHandlerContext,
+    ctx: FreshContext,
   ) {
     if (
       req.headers.get("Authorization") !==
